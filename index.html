@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>80</title>
+    </head>
+    <body>
+        <h3 style="margin-top: 20px; margin-bottom: 20px; ">
+            Making paragraphs using Javascript
+        </h3>
+        
+        <center>
+           
+            <div id="rows">
+                <h2>paragraph 1</h2>
+            <span>1</span>
+            <input type="text" placeholder="Line1" id="Line_1">
+            <br>
+            <br>
+
+            <span>2</span>
+            <input type="text" placeholder="Line2" id="Line_2">
+            <br>
+            <br>
+
+            <span>3</span>
+            <input type="text" placeholder="Line3" id="Line_3">
+            <br>
+            <br>
+
+            <span>4</span>
+            <input type="text" placeholder="Line4" id="Line_4">
+            <br>
+            <br>
+
+            <span>5</span>
+            <input type="text" placeholder="Line5" id="Line_5">
+            <br>
+            <br>
+            
+            <span>6</span>
+            <input type="text" placeholder="Line6" id="Line_6">
+            <br>
+            <br>
+            
+            <button onclick="Paragarph1()" id="get1_button">
+                get paragraph 1
+            </button>
+            <br>
+            <div id="Get_paragraph_1">
+            </div>
+            </div>
+         
+
+            
+            <div id="rows">
+                <h2>paragraph 2</h2>
+            <span>1</span>
+            <input type="text" placeholder="Line1" id="Line_1">
+            <br>
+            <br>
+
+            <span>2</span>
+            <input type="text" placeholder="Line2" id="Line_2">
+            <br>
+            <br>
+
+            <span>3</span>
+            <input type="text" placeholder="Line3" id="Line_3">
+            <br>
+            <br>
+
+            <span>4</span>
+            <input type="text" placeholder="Line4" id="Line_4">
+            <br>
+            <br>
+
+            <span>5</span>
+            <input type="text" placeholder="Line5" id="Line_5">
+            <br>
+            <br>
+            
+            <span>6</span>
+            <input type="text" placeholder="Line6" id="Line_6">
+            <br>
+            <br>
+            
+            <button onclick="Paragarph2()" id="get1_button">
+                get paragraph 2
+            </button>
+            <br>
+            <div id="Get_paragraph_2">
+            </div>
+            </div>
+           
+         </center>
+        </body>
+        <script>
+            paragraph_1 = [];
+
+            function Paragarph1() {
+        var display_p1_array = [];
+        for (var j = 1; j <= 6; j++){
+        var paragraph_1_words = document.getElementById("Line_"+j).value;
+        console.log(paragraph_1_words);
+        paragraph_1.push(paragraph_1_words);
+         }
+      
+    console.log(paragraph_1)
+    var length_of_P1 = paragraph_1.length;
+    console.log(length_of_P1);
+
+    for (var k = 0;k < length_of_P1; k++){
+        display_p1_array.push(paragraph_1[k]);
+        console.log(display_p1_array);
+    }
+    console.log(display_p1_array);
+    document.getElementById("Get_paragraph_1").innerHTML= display_p1_array;
+
+    var remove_commas = display_p1_array.join(". ")
+    console.log(remove_commas);
+    document.getElementById("Get_paragraph_1").innerHTML = remove_commas;
+    document.getElementById("get1_button").style.display = "none";
+}
+paragraph_2 = [];
+
+            function Paragarph2() {
+        var display_p2_array = [];
+        for (var j = 1; j <= 6; j++){
+        var paragraph_2_words = document.getElementById("Line_"+j).value;
+        console.log(paragraph_2_words);
+        paragraph_2.push(paragraph_2_words);
+         }
+      
+    console.log(paragraph_2)
+    var length_of_P2 = paragraph_2.length;
+    console.log(length_of_P2);
+
+    for (var k = 0;k < length_of_P2; k++){
+        display_p2_array.push(paragraph_2[k]);
+        console.log(display_p2_array);
+    }
+    console.log(display_p2_array);
+    document.getElementById("Get_paragraph_2").innerHTML= display_p2_array;
+
+    var remove_commas = display_p2_array.join(". ")
+    console.log(remove_commas);
+    document.getElementById("Get_paragraph_2").innerHTML = remove_commas;
+    document.getElementById("get2_button").style.display = "none";
+}
+
+
+        </script>
+    
+          
+</html>
